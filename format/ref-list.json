@@ -1,0 +1,7 @@
+{
+    "{DOMAIN}" : {
+        "lastUpdated" : "yyyy-mm-dd",
+        "serverName" : "{TEXT}",
+        "reason" : "{TEXT}"
+    }
+}

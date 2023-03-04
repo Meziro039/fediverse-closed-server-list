@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register checker</title>
+</head>
+<body>
+    <h1>Search</h1>
+    <hr>
+    <input type="text" id="SearchDomain" oninput="Search()" placeholder="example.com">
+    <pre id="SearchResult"></pre>
+    <script>
+        let ListJson = {};
+
+        async function DataGet() {
+            const FetchListJson = await fetch("https://raw.githubusercontent.com/meziro039/closed-server-list/main/list.json");
+
+            if (FetchListJson.ok) {
+                ListJson = await FetchListJson.json();
+            } else {
+                return null;
+            };
+        }
+
+        function Search() {
+            document.getElementById("SearchResult").textContent = JSON.stringify(ListJson[document.getElementById("SearchDomain").value], null, 2);
+        }
+
+        DataGet();
+    </script>
+</body>
+</html>

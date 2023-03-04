@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change</title>
+</head>
+<body>
+    <h1>Format Change</h1>
+    <hr>
+    <h2>Console</h2>
+    <h3>Add server</h3>
+    <div>
+        <span>Server name<span style="color: red;">*</span></span>
+        <input type="text" id="ServerName" placeholder="Example">
+    </div>
+    <div>
+        <span>Server domain<span style="color: red;">*</span></span>
+        <input type="text" id="ServerDomain" placeholder="example.com">
+    </div>
+    <div>
+        <span>Reason</span>
+        <input type="text" id="Reason" placeholder="blew up the database.">
+    </div>
+    <div>
+        <span>LastUpdated(UTC/Opt.)</span>
+        <input type="date" id="LastUpdated" >
+    </div>
+    <button onclick="Add();">Add</button>
+    <br><br>
+    <h3>Binding data</h3>
+    <textarea id="BindingData" style="resize: none;width: 60%;height: 200px;" placeholder="list.json" oninput="Update();"></textarea>
+    <hr>
+    <h2>To list.json</h2>
+    <textarea id="ListJson" style="resize: none;width: 60%;height: 200px;" readonly></textarea>
+    <h2>To list.csv</h2>
+    <textarea id="ListCsv" style="resize: none;width: 60%;height: 200px;" readonly></textarea>
+    <hr>
+    <h3>Setting</h3>
+    <button onclick="ClearBackup();">Clear backup cache.</button>
+    <style>
+        body,h1,h2,h3,h4,h5,h6 {
+            margin: 0;
+            padding: 0;
+            line-height: 1.3;
+        }
+    </style>
+
+    <script>
+        function Update(AddJson, IsAdd) {
+            let BindingJson = {};
+            try {
+                document.getElementById("BindingData").style.color = "black";
+                const BindingDataValue = document.getElementById("BindingData").value;
+
+                if (BindingDataValue.length === 0) {
+                    BindingJson = {};
+                } else {
+                    BindingJson = JSON.parse(BindingDataValue);
+                    localStorage.setItem("BackUp", BindingDataValue);
+                };
+            } catch (error) {
+                console.log(true);
+                //alert("Binding date is not JSON.")
+                document.getElementById("BindingData").style.color = "red";
+                console.log(error);
+                return null;
+            };
+
+            let Result = Object.assign(BindingJson, AddJson);
+
+            /*
+            document.getElementById("BindingData").value = JSON.stringify(Result, null, 2);
+            document.getElementById("ListJson").value = JSON.stringify(Result, null, 2);
+            document.getElementById("ListCsv").value = Object.keys(Result);
+            */
+
+            let ResultJsonText = "";
+            let ResultJsonKeys = Object.keys(Result);
+            ResultJsonKeys = ResultJsonKeys.sort();
+            for (let i = 0;i < ResultJsonKeys.length;i++) {
+                const JsonTemp = Result[ResultJsonKeys[i]]
+                ResultJsonText += "\"" + ResultJsonKeys[i] + "\" : {\n    \"lastUpdated\" : \"" + JsonTemp["lastUpdated"] + "\",\n    \"serverName\" : \"" + JsonTemp["serverName"] + "\",\n    \"reason\" : \"" + JsonTemp["reason"] + "\"\n}";
+
+                if (i + 1 !== ResultJsonKeys.length) {
+                    ResultJsonText += ",\n";
+                };
+                console.log(i);
+                console.log(ResultJsonKeys.length);
+            };
+            ResultJsonText = "{\n" + ResultJsonText + "\n}"
+            /*
+            document.getElementById("BindingData").value = ResultJsonText;
+            document.getElementById("ListJson").value = ResultJsonText;
+            document.getElementById("ListCsv").value = ResultJsonKeys.join(",");
+            */
+
+            if ((IsAdd ? true : false)) {
+                document.getElementById("BindingData").value = ResultJsonText;
+            } else {
+                document.getElementById("BindingData").value = JSON.stringify(Result, null, 2);
+            };
+            document.getElementById("ListJson").value = ResultJsonText;
+            document.getElementById("ListCsv").value = ResultJsonKeys.join(",");
+        };
+
+        function Add() {
+            const NowDate = new Date();
+            const ServerName = document.getElementById("ServerName").value;
+            const ServerDomain = document.getElementById("ServerDomain").value;
+            const Reason = document.getElementById("Reason").value;
+            const LastUpdated = document.getElementById("LastUpdated").value ? ((document.getElementById("LastUpdated").value) + "Z") : (NowDate.getUTCFullYear().toString() + "-" + (NowDate.getUTCMonth() + 1).toString().padStart(2, "0") + "-" + NowDate.getUTCDay().toString().padStart(2, "0") + "Z");
+
+            if (ServerName.length === 0) {
+                alert("Some items are not set.");
+                return null;
+            } else if (ServerDomain.length === 0) {
+                alert("Some items are not set.");
+                return null;
+            };
+
+            if (ServerDomain.match(/^[a-z0-9-\.].*$/)) {
+                ;
+            } else {
+                alert("Includes characters that should not be inserted.(Possible character: a-z 0-9 -)");
+                return null;
+            };
+            
+            if (ServerDomain.match(/^[a-z0-9-\.].*\.[a-z0-9-].*$/)) {
+                ;
+            } else {
+                alert("Not a domain string.");
+                return null;
+            };
+
+            let AddJson = {};
+            AddJson[ServerDomain] = {
+                "lastUpdated" : LastUpdated,
+                "serverName" : ServerName,
+                "reason" : Reason
+            };
+
+            Update(AddJson, true);
+        };
+
+        function ClearBackup() {
+            try {
+                localStorage.clear("BackUp");
+                alert("Data deleted successfully.");
+            } catch (error) {  
+            };
+        };
+
+        document.getElementById("BindingData").value = localStorage.getItem("BackUp");
+        Update();
+    </script>
+</body>
+</html>
