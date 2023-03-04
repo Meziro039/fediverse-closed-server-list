@@ -1,4 +1,52 @@
 {
+    "bound4the.icu" : {
+        "lastUpdated" : "2023-03-04Z",
+        "software" : "mastodon",
+        "serverName" : "bound 4 the icu 🏥🚑🚨",
+        "reason" : "Other(Not response.)"
+    },
+    "calista.masto.host" : {
+        "lastUpdated" : "2023-03-04Z",
+        "software" : "mastodon",
+        "serverName" : "CALISTA Portal",
+        "reason" : "Other(Not response.)"
+    },
+    "cockos.net" : {
+        "lastUpdated" : "2023-03-04Z",
+        "software" : "mastodon",
+        "serverName" : "Cockos, Inc. Mastodon",
+        "reason" : "Other(Not response.)"
+    },
+    "deafblind.social" : {
+        "lastUpdated" : "2023-03-04Z",
+        "software" : "mastodon",
+        "serverName" : "Mastodon",
+        "reason" : "Other(Not response.)"
+    },
+    "dogodki.kompot.si" : {
+        "lastUpdated" : "2023-03-04Z",
+        "software" : "mobilizon",
+        "serverName" : "Dogodki Kompot",
+        "reason" : "Other(Not response.)"
+    },
+    "fedi.teebeeart.me" : {
+        "lastUpdated" : "2023-03-04Z",
+        "software" : "unknown",
+        "serverName" : "fedi.teebeeart.me",
+        "reason" : "Other(Not response.)"
+    },
+    "fedisky.com" : {
+        "lastUpdated" : "2023-03-04Z",
+        "software" : "mastodon",
+        "serverName" : "Fedisky",
+        "reason" : "Other(410)"
+    },
+    "freelancers.online" : {
+        "lastUpdated" : "2023-03-04Z",
+        "software" : "mastodon",
+        "serverName" : "Freelancers.online",
+        "reason" : "Other(Not response.)"
+    },
     "gaku-tab-love.com" : {
         "lastUpdated" : "2023-03-04Z",
         "software" : "misskey",
@@ -11,11 +59,95 @@
         "serverName" : "えびぽりす™",
         "reason" : "Unknown"
     },
+    "ja.social" : {
+        "lastUpdated" : "2023-03-04Z",
+        "software" : "mastodon",
+        "serverName" : "JA.social",
+        "reason" : "Other(Not response.)"
+    },
+    "kitsunes.gay" : {
+        "lastUpdated" : "2023-03-04Z",
+        "software" : "calckey",
+        "serverName" : "Kitsunes.Gay",
+        "reason" : "Other(Not response.)"
+    },
+    "margio.ddns.net" : {
+        "lastUpdated" : "2023-03-04Z",
+        "software" : "akkoma",
+        "serverName" : "Andrea Margiovanni",
+        "reason" : "Other(Not response.)"
+    },
+    "mastodon.greenfeathereddragon.com" : {
+        "lastUpdated" : "2023-03-04Z",
+        "software" : "mastodon",
+        "serverName" : "Green Feathered Dragon's Lair",
+        "reason" : "Other(521)"
+    },
+    "mastodon.hockey" : {
+        "lastUpdated" : "2023-03-04Z",
+        "software" : "mastodon",
+        "serverName" : "mastodon.hockey",
+        "reason" : "Other(Not response.)"
+    },
+    "mastodon.pyraster.fr" : {
+        "lastUpdated" : "2023-03-04Z",
+        "software" : "mastodon",
+        "serverName" : "Pyraster Mastodon",
+        "reason" : "Other(Not response.)"
+    },
+    "mastodon.tomw.net" : {
+        "lastUpdated" : "2023-03-04Z",
+        "software" : "mastodon",
+        "serverName" : "Internet Privacy Mastodon",
+        "reason" : "Other(Not response.)"
+    },
+    "misskey.loupe.page" : {
+        "lastUpdated" : "2023-03-04Z",
+        "software" : "misskey",
+        "serverName" : "蜜柑のMisskey",
+        "reason" : "Other(Not response.)"
+    },
     "misskey.xyz" : {
         "lastUpdated" : "2023-03-04Z",
         "software" : "misskey",
         "serverName" : "Misskey",
         "reason" : "Other(Transferred to misskey.io)"
+    },
+    "mountainbock.social" : {
+        "lastUpdated" : "2023-03-04Z",
+        "software" : "mastodon",
+        "serverName" : "MountainBock.Social",
+        "reason" : "Other(Not response.)"
+    },
+    "mstdn.kdmgkr.com" : {
+        "lastUpdated" : "2023-03-04Z",
+        "software" : "mastodon",
+        "serverName" : "Mastodon",
+        "reason" : "Other(Not response.)"
+    },
+    "mstdn.kodein.be" : {
+        "lastUpdated" : "2023-03-04Z",
+        "software" : "mastodon",
+        "serverName" : "TootIn",
+        "reason" : "Other(Not response.)"
+    },
+    "mstdn.v-elf.com" : {
+        "lastUpdated" : "2023-03-04Z",
+        "software" : "mastodon",
+        "serverName" : "ばーちゃるえるふ村",
+        "reason" : "Other(Not response.)"
+    },
+    "muso.social" : {
+        "lastUpdated" : "2023-03-04Z",
+        "software" : "mastodon",
+        "serverName" : "muso.social",
+        "reason" : "Other(Not response.)"
+    },
+    "n.kdecherf.com" : {
+        "lastUpdated" : "2023-03-04Z",
+        "software" : "pleroma",
+        "serverName" : "Kdecherf's Notes",
+        "reason" : "Other(Not response.)"
     },
     "niu.moe" : {
         "lastUpdated" : "2023-03-04Z",
@@ -29,6 +161,24 @@
         "serverName" : "無職スキー",
         "reason" : "Unknown"
     },
+    "nozomi.best" : {
+        "lastUpdated" : "2023-03-04Z",
+        "software" : "mastodon",
+        "serverName" : "Purple Idol Shrine",
+        "reason" : "Other(Not response.)"
+    },
+    "orbital.rodeo" : {
+        "lastUpdated" : "2023-03-04Z",
+        "software" : "unknown",
+        "serverName" : "orbital.rodeo",
+        "reason" : "Other(404)"
+    },
+    "peaky.tech" : {
+        "lastUpdated" : "2023-03-04Z",
+        "software" : "misskey",
+        "serverName" : "peaky.tech",
+        "reason" : "Other(Not response.)"
+    },
     "pico.misskey.moe" : {
         "lastUpdated" : "2023-03-04Z",
         "software" : "misskey",
@@ -40,5 +190,113 @@
         "software" : "misskey",
         "serverName" : "Mimoe",
         "reason" : "Other(Financial reasons.)"
+    },
+    "pol.masto.host" : {
+        "lastUpdated" : "2023-03-04Z",
+        "software" : "mastodon",
+        "serverName" : "Mastodon",
+        "reason" : "Other(Not response.)"
+    },
+    "porsche.earth" : {
+        "lastUpdated" : "2023-03-04Z",
+        "software" : "pixelfed",
+        "serverName" : "Porsche.Earth",
+        "reason" : "Other(Not response.)"
+    },
+    "redwings.social" : {
+        "lastUpdated" : "2023-03-04Z",
+        "software" : "mastodon",
+        "serverName" : "Redwings.social",
+        "reason" : "Other(Not response.)"
+    },
+    "seaofpeers.com" : {
+        "lastUpdated" : "2023-03-04Z",
+        "software" : "mastodon",
+        "serverName" : "P2P Mastodon Server",
+        "reason" : "Other(Not response.)"
+    },
+    "social.darn.fish" : {
+        "lastUpdated" : "2023-03-04Z",
+        "software" : "mastodon",
+        "serverName" : "darnfish",
+        "reason" : "Other(Not response.)"
+    },
+    "social.extremelyoffline.org" : {
+        "lastUpdated" : "2023-03-04Z",
+        "software" : "mastodon",
+        "serverName" : " tiny online community for the extremely offline and extremely offline hopefuls",
+        "reason" : "Other(Not response.)"
+    },
+    "social.immibis.com" : {
+        "lastUpdated" : "2023-03-04Z",
+        "software" : "pleroma",
+        "serverName" : "immibis.com",
+        "reason" : "Other(Not response.)"
+    },
+    "social.kabukimono.top" : {
+        "lastUpdated" : "2023-03-04Z",
+        "software" : "pleroma",
+        "serverName" : "kabukimono",
+        "reason" : "Other(Not response.)"
+    },
+    "social.karsten-voigt.de" : {
+        "lastUpdated" : "2023-03-04Z",
+        "software" : "mastodon",
+        "serverName" : "Blechpiraten-Mastodon",
+        "reason" : "Other(Not response.)"
+    },
+    "social.lauercloud.de" : {
+        "lastUpdated" : "2023-03-04Z",
+        "software" : "mastodon",
+        "serverName" : "Mastodon",
+        "reason" : "Other(Not response.)"
+    },
+    "social.linss.com" : {
+        "lastUpdated" : "2023-03-04Z",
+        "software" : "mastodon",
+        "serverName" : "Linss Mastodon",
+        "reason" : "Other(Not response.)"
+    },
+    "social.livepods.eu" : {
+        "lastUpdated" : "2023-03-04Z",
+        "software" : "misskey",
+        "serverName" : "social.livepods.eu",
+        "reason" : "Other(Not response.)"
+    },
+    "social.nettohikari.com" : {
+        "lastUpdated" : "2023-03-04Z",
+        "software" : "pleroma",
+        "serverName" : "Hikari Family Social",
+        "reason" : "Other(Not response.)"
+    },
+    "social.textasylum.de" : {
+        "lastUpdated" : "2023-03-04Z",
+        "software" : "mastodon",
+        "serverName" : "Mastodon",
+        "reason" : "Other(Not response.)"
+    },
+    "social.triplecore.org" : {
+        "lastUpdated" : "2023-03-04Z",
+        "software" : "mastodon",
+        "serverName" : "Mastodon",
+        "reason" : "Other(Not response.)"
+    },
+    "socnode.social" : {
+        "lastUpdated" : "2023-03-04Z",
+        "software" : "mastodon",
+        "serverName" : "Mastodon",
+        "reason" : "Other(Not response.)"
+    },
+    "spojnik.works" : {
+        "lastUpdated" : "2023-03-04Z",
+        "software" : "mastodon",
+        "serverName" : "Mastodon Spójnika",
+        "reason" : "Other(Not response.)"
+    },
+    "theverge.space" : {
+        "lastUpdated" : "2023-03-04Z",
+        "software" : "unknown",
+        "serverName" : "theverge.space",
+        "reason" : "Other(404)"
     }
-}
+    }

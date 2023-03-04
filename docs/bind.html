@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>CSV to JSON</h2>
+    <div>
+        <h3>Csv Input</h3>
+        <textarea id="Csv" style="resize: none;width: 60%;height: 200px;" placeholder='{"domain": "example.com", "name": "example", "software": "example", "reason": "reason"}' oninput="CsvToJson();"></textarea>
+    </div>
+    <div>
+        <h3>Json Output</h3>
+        <textarea id="CsvJsonOutput" style="resize: none;width: 60%;height: 200px;" readonly></textarea>
+    </div>
+    <hr>
+    <h2>JSON Bind</h2>
+    <div>
+        <h3>Base json</h3>
+        <textarea id="BaseJson" style="resize: none;width: 60%;height: 200px;" placeholder="list.json" oninput="JsonBind();"></textarea>
+    </div>
+    <div>
+        <h3>Join json</h3>
+        <textarea id="JoinJson" style="resize: none;width: 60%;height: 200px;" placeholder="list.json" oninput="JsonBind();"></textarea>
+    </div>
+    <div>
+        <h3>Json Output</h3>
+        <textarea id="BindJsonOutput" style="resize: none;width: 60%;height: 200px;" readonly></textarea>
+    </div>
+    <script>
+        function CsvToJson() {
+            //let CsvArrays = (document.getElementById("Csv").value).match(/("|')\{[^\{\}].*?\}("|')/g);
+            //let CsvArrays = (document.getElementById("Csv").value).match(/\{[^\{\}].*?\}(,|$)/g);
+            let CsvArrays = (document.getElementById("Csv").value).split("\n");
+            console.log(CsvArrays);
+
+            let JsonData = {};
+            for (let i = 0;i < CsvArrays.length;i++) {
+                // CsvArrays[i] = CsvArrays[i].replace(/,$/, ""); //.replace(/^("|')/, "").replace(/("|')$/, "").replace(/'/g, "\"");
+                console.log(CsvArrays[i]);
+                CsvArrays[i] = JSON.parse(CsvArrays[i]);
+
+                const Jt = CsvArrays[i];
+                const NowDate = new Date();
+                JsonData[Jt["domain"]] = {
+                    "lastUpdated" : NowDate.getUTCFullYear().toString() + "-" + (NowDate.getUTCMonth() + 1).toString().padStart(2, "0") + "-" + NowDate.getUTCDate().toString().padStart(2, "0") + "Z",
+                    "software" : Jt["software"],
+                    "serverName" : Jt["name"],
+                    "reason" : Jt["reason"]
+                };
+            };
+            document.getElementById("CsvJsonOutput").value = JSON.stringify(JsonData, null, 2);
+        }
+
+        function JsonBind() {
+            document.getElementById("BindJsonOutput").value = Sort(Object.assign((JSON.parse(document.getElementById("BaseJson").value)), (JSON.parse(document.getElementById("JoinJson").value))));
+
+            function Sort(JsonData) {
+                let ResultJsonText = "";
+                let ResultJsonKeys = Object.keys(JsonData);
+                ResultJsonKeys = ResultJsonKeys.sort();
+                for (let i = 0;i < ResultJsonKeys.length;i++) {
+                    const JsonTemp = JsonData[ResultJsonKeys[i]]
+                    ResultJsonText += "\"" + ResultJsonKeys[i] + "\" : {\n    \"lastUpdated\" : \"" + JsonTemp["lastUpdated"] + "\",\n    \"software\" : \"" + JsonTemp["software"] + "\",\n    \"serverName\" : \"" + JsonTemp["serverName"] + "\",\n    \"reason\" : \"" + JsonTemp["reason"] + "\"\n}";
+
+                    if (i + 1 !== ResultJsonKeys.length) {
+                        ResultJsonText += ",\n";
+                    };
+                };
+                ResultJsonText = "{\n" + ResultJsonText + "\n}"
+                JSON.parse(ResultJsonText);
+                return ResultJsonText;
+            }
+        };
+    </script>
+</body>
+</html>
