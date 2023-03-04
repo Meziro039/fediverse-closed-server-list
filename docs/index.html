@@ -22,6 +22,8 @@
             } else {
                 return null;
             };
+
+            document.getElementById("SearchResult").textContent = JSON.stringify(ListJson, null, 2);
         }
 
         function Search() {

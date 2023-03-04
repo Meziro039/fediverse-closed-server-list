@@ -1,11 +1,43 @@
 {
+    "gaku-tab-love.com" : {
+        "lastUpdated" : "2023-03-04Z",
+        "software" : "misskey",
+        "serverName" : "がくたぶらぶ",
+        "reason" : "Unknown"
+    },
+    "groundpolis.app" : {
+        "lastUpdated" : "2023-03-04Z",
+        "software" : "groundpolis",
+        "serverName" : "えびぽりす™",
+        "reason" : "Unknown"
+    },
+    "misskey.xyz" : {
+        "lastUpdated" : "2023-03-04Z",
+        "software" : "misskey",
+        "serverName" : "Misskey",
+        "reason" : "Other(Transferred to misskey.io)"
+    },
+    "niu.moe" : {
+        "lastUpdated" : "2023-03-04Z",
+        "software" : "mastodon",
+        "serverName" : "niu.moe",
+        "reason" : "Unknown"
+    },
+    "nojob.jp" : {
+        "lastUpdated" : "2023-03-04Z",
+        "software" : "misskey",
+        "serverName" : "無職スキー",
+        "reason" : "Unknown"
+    },
     "pico.misskey.moe" : {
-        "lastUpdated" : "2023-03-04",
+        "lastUpdated" : "2023-03-04Z",
+        "software" : "misskey",
         "serverName" : "pico.misskey.moe",
         "reason" : "Other(OCI Account suspension.)"
     },
     "picosize.misskey.moe" : {
-        "lastUpdated" : "2023-03-04",
+        "lastUpdated" : "2023-03-04Z",
+        "software" : "misskey",
         "serverName" : "Mimoe",
         "reason" : "Other(Financial reasons.)"
     }
